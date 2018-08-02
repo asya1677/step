@@ -19,89 +19,85 @@
     <header>
         <!--Элемент header является как бы вводным элементом, предваряющим основное содержимое. Здесь могут быть заголовки, элементы 
         навигации или какие-либо другие вспомогательные элементы, например, логотип, форма поиска и т.п. -->
-        <form>
+        <form align="right" class="form">
             <!--Создание формы. Не по теме, но так уж получилось.-->
-            <span style="float: right;">
-                <p>
-                    <button type="sumbit">Войти</button>
-                    <button type="reset">Отмена</button>
-                    <button type="sumbit">Зарегистироваться</button>
-                </p>
-            </span>
             <br>
-            <br>
-            <br>
-            <span style="float:right">
-                <p>
-                    <label for="userName">Логин</label>
-                    <input type="text" id="userName" name="userName" size="18" />
-                </p>
-                <p>
-                    <label for="password">Пароль</label>
-                    <input type="password" id="password" name="password" />
-                </p>
-            </span>
+
+            <p>
+                <label for="userName" class="form_title form_title--login">Логин</label>
+                <input type="text" id="userName" name="userName" size="18" />
+            </p>
+            <p>
+                <label for="password" class="form_title form_title--passw">Пароль</label>
+                <input type="password" id="password" name="password" />
+            </p>
+            <p>
+                <button type="sumbit" class="form_button form_button--voyti">Войти</button>
+                <button type="reset" class="form_button form_button--otmena">Отмена</button>
+                <button type="sumbit" class="form_button form_button--reg">Зарегистироваться</button>
+            </p>
         </form>
 
         <h1 title="Рецепт тирамису" id="Tiramisu" align="center">
             <font color="red">Тирамису</font>
         </h1>
         <!--Глобальный атрибут title выводит описание при наведении курсора.-->
-
-        <h2 hidden>
-            <!-- hidden делает текст невидимым на странице. -->
-        </h2>
-        <nav>
-            <summary style="color:blue">
-                <u>
-                    <a href="#about">О тирамису</a>
-                </u>
-            </summary>
-            <details>
-                <summary style="color:blue">
+        <div class="menu">
+            <h2 hidden>
+                <!-- hidden делает текст невидимым на странице. -->
+            </h2>
+            <nav class="menu__nav">
+                <summary style="color:blue" class="menu__nav menu__nav--tiramisy">
                     <u>
-                        <a href="#in">Ингридиенты</a>
+                        <a href="#about" >О тирамису</a>
                     </u>
                 </summary>
-                <li>сыр маскарпоне — 500 г;</li>
-                <li>печенье "Савоярди" — 1 упаковка;</li>
-                <li>яйца — 4 шт; </li>
-                <li>сахарная пудра — 250 г;</li>
-                <li>крепкий черный кофе — 1 чашка;</li>
-                <li>ликер или бренди — по вкусу; </li>
-                <li>ванилин — по вкусу;</li>
-                <li>>какао-порошок — по вкусу.</li>
-            </details>
-            <details>
-                <summary style="color:blue">
+                <details class="menu__list">
+                    <summary style="color:blue" class="menu__list menu__list--ingredients">
+                        <u>
+                            <a href="#in">Ингридиенты</a>
+                        </u>
+                    </summary>
+                    <li>сыр маскарпоне — 500 г;</li>
+                    <li>печенье "Савоярди" — 1 упаковка;</li>
+                    <li>яйца — 4 шт; </li>
+                    <li>сахарная пудра — 250 г;</li>
+                    <li>крепкий черный кофе — 1 чашка;</li>
+                    <li>ликер или бренди — по вкусу; </li>
+                    <li>ванилин — по вкусу;</li>
+                    <li>>какао-порошок — по вкусу.</li>
+                </details>
+                <details>
+                    <summary style="color:blue" class="menu__list menu__list--recept">
+                        <u>
+                            <a href="#rep">О рецепте</a>
+                        </u>
+                    </summary>
+                    <li>сыр маскарпоне — 500 г;</li>
+                    <li> выход: 4-6 порций;</li>
+                    <li>подготовка: 30 мин;</li>
+                    <li>приготовление: 30 мин;</li>
+                    <li>готовится за: 1 час (без учета остывания).</li>
+                </details>
+                <summary style="color:blue" class="menu__list menu__list--prigotovlenie">
                     <u>
-                        <a href="#rep">О рецепте</a>
+                        <a href="#cooking">Приготовление</a>
                     </u>
                 </summary>
-                <li>сыр маскарпоне — 500 г;</li>
-                <li> выход: 4-6 порций;</li>
-                <li>подготовка: 30 мин;</li>
-                <li>приготовление: 30 мин;</li>
-                <li>готовится за: 1 час (без учета остывания).</li>
-            </details>
-            <summary style="color:blue">
-                <u>
-                    <a href="#cooking">Приготовление</a>
-                </u>
-            </summary>
-            <summary style="color:blue">
-                <u>
-                    <a href="#comm">Комментарии</a>
-                </u>
-            </summary>
-        </nav>
+                <summary style="color:blue" class="menu__list menu__list--comm">
+                    <u>
+                        <a href="#comm">Комментарии</a>
+                    </u>
+                </summary>
+            </nav>
 
-        <figure>
-            <img src="cake.jpeg" alt="Картинка с тирамису" ; style="float:center" ;>
-            <figcaption>
-                <i>Вариант подачи тирамису</i>
-            </figcaption>
-        </figure>
+            <figure>
+                <img src="cake.jpeg" alt="Картинка с тирамису" ; align="center" ;>
+                <figcaption>
+                    <i>Вариант подачи тирамису</i>
+                </figcaption>
+            </figure>
+        </div>
 
         <aside style="float:right; width:200px;">
             <u>Воздушное кокосовое печенье — рецепт от кулинарного блогера</u>
@@ -112,15 +108,15 @@
         </aside>
     </header>
 
-    <main>
+    <main class="main">
         <!--Элемент main представляет основное содержимое веб-страницы.-->
 
 
-        <section id="about" style="font-size: 19px;">
+        <section id="about" style="font-size: 19px;" class="main__about">
             <!--Элемент section объединяет связанные между собой куски информации html-документа, выполняя их группировку. Например, section может включать 
             набор вкладок на странице, новости, объединенные по категории и т.д.
             Каждый элемент section должен быть идентифицирован с помощью заголовка h1-h6.-->
-            <h3 style="font-size: 30px; text-align: center">Этот невероятный десерт можно сделать и дома — и поверьте, он будет ничем не хуже приготовленного в итальянском
+            <h3 style="font-size: 30px; text-align: center" class="main__about main__about--quote">Этот невероятный десерт можно сделать и дома — и поверьте, он будет ничем не хуже приготовленного в итальянском
                 ресторане.
             </h3>
             <p>Говорят, что вы не были в Италии, если не попробовали там тирамису. Название — Tiramisu — дословно переводится
@@ -134,7 +130,7 @@
                 <br>Большое количество ингредиентов, некоторая их экзотичность для нас, длительный процесс приготовления и длительная
                 выдержка на холоде заставят приложить немало усилий. Но в итоге вы получаете красивый, нежный, мягкий и невероятно
                 вкусный десерт. </p>
-            <h4 style="font-size: 30px; text-align: center">
+            <h4 style="font-size: 30px; text-align: center" class="main__about main__about--quote">
                 <q>
                     <i>Даже классический тирамису, приготовленный дома, получится совершенно оригинальным</i>
                 </q>
@@ -147,37 +143,37 @@
                 во-вторых, на выходе у вас будет тот самый десерт, которым восхищаются и который обожают во всем мире.</p>
         </section>
 
-        <section id="recipe" style="font-size: 19px;">
+        <section id="recipe" style="font-size: 19px;" class="main__recipe">
             <ul>
                 <!--Маркированный список-->
-                <b id="rep" style="font-size: 29px; width: 40px; color: brown;">О рецепте: </b>
-                <li> выход: 4-6 порций;</li>
-                <li>подготовка: 30 мин;</li>
-                <li>приготовление: 30 мин;</li>
-                <li>готовится за: 1 час (без учета остывания).</li>
+                <b id="rep" style="font-size: 29px; width: 40px; color: brown;" class="main__recipe main__recipe--title">О рецепте: </b>
+                <li class="main__recipe main__recipe--item">выход: 4-6 порций;</li>
+                <li class="main__recipe main__recipe--item">подготовка: 30 мин;</li>
+                <li class="main__recipe main__recipe--item">приготовление: 30 мин;</li>
+                <li class="main__recipe main__recipe--item">готовится за: 1 час (без учета остывания).</li>
             </ul>
 
             <ol>
                 <!--Нумерованный список-->
-                <b id="in" style="font-size: 30px; color: brown;">Ингридиенты: </b>
-                <li>сыр маскарпоне — 500 г;</li>
-                <li>печенье "Савоярди" — 1 упаковка;</li>
-                <li>яйца — 4 шт; </li>
-                <li>сахарная пудра — 250 г;</li>
-                <li>крепкий черный кофе — 1 чашка;</li>
-                <li>ликер или бренди — по вкусу; </li>
-                <li>ванилин — по вкусу;</li>
-                <li>>какао-порошок — по вкусу.</li>
+                <b id="in" style="font-size: 30px; color: brown;" class="main__recipe main__recipe--title">Ингридиенты: </b>
+                <li class="main__recipe main__recipe--item">сыр маскарпоне — 500 г;</li>
+                <li class="main__recipe main__recipe--item">печенье "Савоярди" — 1 упаковка;</li>
+                <li class="main__recipe main__recipe--item">яйца — 4 шт; </li>
+                <li class="main__recipe main__recipe--item">сахарная пудра — 250 г;</li>
+                <li class="main__recipe main__recipe--item">крепкий черный кофе — 1 чашка;</li>
+                <li class="main__recipe main__recipe--item">ликер или бренди — по вкусу; </li>
+                <li class="main__recipe main__recipe--item">ванилин — по вкусу;</li>
+                <li class="main__recipe main__recipe--item">какао-порошок — по вкусу.</li>
             </ol>
         </section>
 
-        <section id="cooking" style="font-size: 19px;">
+        <section id="cooking" style="font-size: 19px;" align="center" class="main__cooking">
             <p>Как только соберетесь готовить тирамису, сразу заварите чашку крепкого кофе — натурального, ароматного и без
                 сахара. Пока он будет остывать, беритесь за основные процессы. Прежде всего — яйца. Берите только охлажденные,
                 иначе белки могут не взбиться. Кроме того, поскольку яйца используются сырые, брать нужно исключительно свежие
                 и из источника, заслуживающего доверие. </p>
             <br>
-            <h3>Приготовление</h3>
+            <h3 class="main__cooking main__cooking--title">Приготовление</h3>
             <br>
             <br> Белки отделите от желтков — в разную посуду. Это несложно, если не уроните яйцо на пол и не повредите желток. Белки
             перелейте в чашу миксера и поместите ее в холодную воду, чтобы они продолжали оставаться холодными. Мастера рекомендуют
@@ -187,13 +183,13 @@
             тех пор, пока белки не образуют плотную пену — обычно это занимает 12-15 мин. Если при переворачивании емкости
             с белками они не выливаются и остаются на месте, значит, у вас все получилось.
             <br>
-            <img src="cake1.png">
+            <img src="cake1.png" class="main__cooking main__cooking--img">
             <br> Желтки отдельно взбейте добела с сахарной пудрой, добавляя ее постепенно — до 1 стакана по вкусу, и ванилином
             (щепотка ванили или несколько капель ванильной эссенции). Это долго! Взбитые желтки должны быть практически белыми
             и похожими на густой крем. Вообще, взбивание — это всегда долго, если вы хотите получить действительно хороший
             продукт. И, самое главное, не надо взбивать на высокой скорости, иначе рискуете все испортить.
             <br>
-            <img src="cake2.png">
+            <img src="cake2.png" class="main__cooking main__cooking--img">
             <br> Сливочный сыр маскарпоне выложите в отдельную посуду и разомните лопаткой. Внимательно с маскарпоне, несколько
             раз видел явно совсем не маскарпоне, хотя упаковка была похожа. Да и свежесть сливочного сыра — крайне важна,
             всегда обращайте внимание на дату изготовления.
@@ -201,7 +197,7 @@
             <br> Еще один важный момент. Когда дело дойдет до сыра, лучше выключить миксер. Возьмите маскарпоне и постепенно вмешивайте
             его в взбитые с пудрой желтки лопаткой. Осторожно перемешивайте смесь, пока она не станет совершенно однородной.
             <br>
-            <img src="cake3.png">
+            <img src="cake3.png" class="main__cooking main__cooking--img">
             <br> Далее, продолжая перемешивать крем лопаткой, постепенно в эту массу вмешивайте взбитые белки, тоже лучше вручную,
             лопаткой. Нужно получить однородную, без комков и вкраплений, густую массу.
             <br>
@@ -225,7 +221,7 @@
             <br>
             <br> Сразу же покладите савоярди на слой крема. Надо, чтобы савоярди покрыли всю или почти всю площадь крема.
             <br>
-            <img src="cake4.png">
+            <img src="cake4.png" class="main__cooking main__cooking--img">
             <br> Когда все вазочки будут заполнены кремом и пропитанным печеньем, остатки крема аккуратно выложите поверх печенья.
             <br>
             <br> Да, чуть не забыл, остатки крема стоит съесть, даже если придется их соскребать со стенок посуды пальцем. Крем
@@ -240,7 +236,7 @@
             <br> Поставьте вазочки с десертом в холодильник минимум на 2 часа. А еще лучше на ночь! И только потом, заварив себе
             чашку ароматного кофе, приступайте к небесного вкуса тирамису.
             <br>
-            <img src="cake5.png" alt="">
+            <img src="cake5.png" class="main__cooking main__cooking--img">
             <br>
         </section>
 
@@ -256,21 +252,21 @@
 
     <hr />
     <hr />
-    <section id="comm" style="font-size: 17px;">
-        <h3>Комментарии</h3>
+    <section id="comm" style="font-size: 17px;" class="comm">
+        <h3 class="comm__title">Комментарии</h3>
         <article>
             <!--Элемент article представляет целостный блок информации на странице, который может рассматриваться отдельно и использоваться 
                 независимо от других блоков. Например, это может быть пост на форуме или статья в блоге, онлайн-журнале, комментарий пользователя.-->
-            <h4>Неплохо</h4>
-            <p>Делала первый раз. Сойдёт.</p>
+            <h4 class="comm__name">Неплохо</h4>
+            <p class="comm__text">Делала первый раз. Сойдёт.</p>
         </article>
         <article>
-            <h4>Ерунда</h4>
-            <p>Мне не понравилось...</p>
+            <h4 class="comm__name">Ерунда</h4>
+            <p class="comm__text">Мне не понравилось...</p>
         </article>
         <article>
-            <h4>Непонятно</h4>
-            <p>Лучше всё отдельно съесть. Ни в плюс, ни в минус</p>
+            <h4 class="comm__name">Непонятно</h4>
+            <p class="comm__text">Лучше всё отдельно съесть. Ни в плюс, ни в минус</p>
         </article>
     </section>
 </body>
